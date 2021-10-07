@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Caompatible" content="ie=edge">
+    <title>Data Binding</title>
+</head>
+
+<body>
+    <div id="app">
+        {{ message }}
+        <h3>{{ numericValue}}</h3>
+    </div>
+    <!------------------------------------------------------- -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Learning Vue',
+                numericValue: 54
+            }
+        })
+    </script>
+</body>
+</html>

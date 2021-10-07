@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Caompatible" content="ie=edge">
+    <title>Data Binding</title>
+</head>
+
+    <body>
+        <!--DIRECTIVE 1  -->
+        <!--<div id="app">
+               
+            <a v-bind:href="url">link</a>
+            se puede omitir el v-bind: solo con los dos puntos ( : )
+            <img :src="urlImg" alt=""> 
+        </div>-->
+        <!--DIRECTIVA 2-->
+        <div id="app">
+            <h1 v-if="visible">MI TITULO</h1>
+        </div>
+        
+        <div id="app1">
+            <div>
+                <div v-if="saludo">
+                    <p>HOLA</p>
+                </div>
+                <div v-else>
+                    <p>CHAO</p>
+                    
+                </div>
+                <h4 v-if="edad >=18">MAYOR DE EDAD</h4>
+                <h4 v-else>MENOR DE EDAD</h4>
+            </div>
+
+        </div>
+        <!----------------------------------------------->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <script>
+            //DIRECTIVE 1
+            /*let app = new Vue({
+                
+               el: '#app',
+                data: {
+                    
+                    url: 'https://google.com',
+                    urlImg: 'https://picsum.photos/600/400'
+                }
+            })*/
+            //DIRECTIVE 2
+            let app = new Vue({
+                el: '#app',
+                data:{
+                    visible: false
+                }
+            })
+            let app1 = new Vue({
+                el: '#app1',
+                data:{
+                    saludo: false,
+                    edad: 17
+                }
+            })
+        </script>
+    </body>
+</html>
+
